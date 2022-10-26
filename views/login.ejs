@@ -17,12 +17,11 @@
     <div class="container my-5">
       <div class="card">
         <div class="card-body">
-          <% if(locals.success) { %>
+          <% if (locals.success) { %>
           <div class="alert alert-danger" role="alert">
             <%= locals.message %>
           </div>
-          <% }
-
+          <% } %>
           <form action="/auth/login" method="POST">
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>

@@ -19,10 +19,7 @@ exports.login = async (req, res) => {
           !results ||
           !(await bcrypt.compare(password, results[0].password))
         ) {
-          res.redirect("login", {
-            success: false,
-            message: "Password or Email are incorrect",
-          });
+          res.status(401).redirect("/login");
         } else {
           res.status(200).redirect("/products");
         }
