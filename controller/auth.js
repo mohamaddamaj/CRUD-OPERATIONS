@@ -78,7 +78,6 @@ exports.register = (req, res) => {
 
 //midlleware to check if the user has cookie or not
 exports.isLoggedIn = async (req, res, next) => {
-  console.log(req.cookies);
   if (req.cookies.usersLogin) {
     try {
       // 1. Verify the token
